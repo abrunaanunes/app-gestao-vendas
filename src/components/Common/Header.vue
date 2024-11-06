@@ -1,25 +1,32 @@
-<script setup></script>
+<script setup>
+    import { useRouter } from 'vue-router';
+</script>
 
 <template>
     <header class="bg-gray-50 py-8">
         <nav class="container px-4 mx-auto flex justify-between items-center">
             <div class="text-2xl font-semibold text-gray-800 dark:text-white">
-                <a href="#" class="text-gray-800 hover:text-blue-500">Gestão de Vendas</a>
+                <router-link to="/" class="text-gray-800 hover:text-blue-500">Gestão de Vendas</router-link>
             </div>
             <ul class="flex space-x-6">
                 <li>
-                    <a href="/seller" class="text-gray-700 hover:text-blue-500 dark:text-white dark:hover:text-blue-400">
+                    <router-link
+                        to="/seller"
+                        class="text-gray-700 hover:text-blue-500 dark:text-white dark:hover:text-blue-400">
                         Vendedores
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="/sale" class="text-gray-700 hover:text-blue-500 dark:text-white dark:hover:text-blue-400">
+                    <router-link
+                        to="/sale"
+                        class="text-gray-700 hover:text-blue-500 dark:text-white dark:hover:text-blue-400">
                         Vendas
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </nav>
     </header>
+
     <div class="container py-12 px-4 mx-auto">
         <div class="sm:flex sm:items-center sm:justify-between">
             <div>
