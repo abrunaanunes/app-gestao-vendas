@@ -44,6 +44,7 @@
                     <slot name="description"></slot>
                 </p>
             </div>
+            <slot name="button"></slot>
         </div>
     </div>
 </template>
