@@ -3,7 +3,7 @@ import axios from 'axios';
 const jwt = localStorage.getItem('jwt');
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json',
