@@ -2,6 +2,7 @@
 import { onMounted, ref, reactive, defineAsyncComponent } from 'vue';
 import Header from '../components/Common/Header.vue';
 import Table from '../components/Common/Table.vue';
+import CardEmptyTable from '../components/Common/CardEmptyTable.vue';
 import Pagination from '../components/Common/Pagination.vue';
 import api from '../services/axios';
 
@@ -79,7 +80,7 @@ const addSeller = (seller) => {
   <section class="container pb-12 px-4 mx-auto">
     <!-- Exibir a tabela ou o formulário com base no estado de 'showForm' -->
     <div v-if="!showForm">
-        <Table>
+        <Table v-if="sellers?.data?.length">
             <template #cols>
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
@@ -112,6 +113,7 @@ const addSeller = (seller) => {
                 </tr>
             </template>
         </Table>
+        <CardEmptyTable v-else></CardEmptyTable>
         <Pagination></Pagination>
     </div>
 

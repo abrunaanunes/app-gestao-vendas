@@ -6,7 +6,7 @@
     <header class="bg-gray-50 py-8">
         <nav class="container px-4 mx-auto flex justify-between items-center">
             <div class="text-2xl font-semibold text-gray-800 dark:text-white">
-                <router-link to="/" class="text-gray-800 hover:text-blue-500">Gestão de Vendas</router-link>
+                <router-link to="/seller" class="text-gray-800 hover:text-blue-500">Gestão de Vendas</router-link>
             </div>
             <ul class="flex space-x-6">
                 <li>
